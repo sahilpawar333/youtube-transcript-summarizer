@@ -1,0 +1,100 @@
+body {
+    font-family: 'Arial', sans-serif;
+    width: 300px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    color: #333; /* Text color */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
+
+.header {
+    display: flex;
+    align-items: center; /* Center logo and title vertically */
+    margin-bottom: 10px; /* Space below header */
+}
+
+.logo {
+    width: 40px; /* Small size for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and title */
+}
+
+h1 {
+    font-size: 20px; /* Larger font size for title */
+    font-weight: bold; /* Thicker text */
+    color: #c3190d; /* Bright color for title */
+    margin: 0; /* Remove default margin */
+}
+
+input {
+    padding: 10px; /* Increased padding */
+    margin-bottom: 10px;
+    border: 2px solid #ccc; /* Thicker border */
+    border-radius: 4px;
+    width: 100%; /* Make input full width */
+    font-size: 14px; /* Font size for input */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input:hover {
+    border-color: red; /* Change border color to red on hover */
+}
+
+input:focus {
+    border-color: black; /* Change border color to black on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    padding: 10px;
+    background-color:#c3190d ;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Make button full width */
+    font-size: 16px; /* Larger font size for button */
+    font-weight: bold; /* Thicker button text */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background color and transform */
+}
+
+button:hover {
+    background-color: #d32a09; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+button:active {
+    background-color: #ff0606; /* Even darker color when button is pressed */
+}
+
+.spinner {
+    display: none; /* Hide by default */
+    border: 8px solid #040404; /* Light gray background */
+    border-top: 8px solid #c3190d; /* Blue color for spinner */
+    border-radius: 50%; /* Make it round */
+    width: 40px; /* Size of the spinner */
+    height: 40px; /* Size of the spinner */
+    animation: spin 1s linear infinite; /* Spin animation */
+    margin: 10px 0; /* Margin around the spinner */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.summary-result {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center; /* Center the summary result */
+    padding: 10px; /* Padding around summary */
+    border: 1px solid #ccc; /* Border for better separation */
+    border-radius: 4px; /* Rounded corners for summary */
+    background-color: #eee9e9; /* White background for summary */
+    display: none; /* Hide by default */
+}

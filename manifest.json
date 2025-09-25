@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Summarizer",
+    "version": "1.0",
+    "description": "Summarizes YouTube videos using captions.",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "logo.png",
+        "48": "logo.png",
+        "128": "logo.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": ["storage", "activeTab"],
+    "icons": {
+      "16": "logo.png",
+      "48": "logo.png",
+      "128": "logo.png"
+    }
+  }
+  
