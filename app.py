@@ -21,11 +21,6 @@ model = BartForConditionalGeneration.from_pretrained(model_name)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model.to(device)
 
-
-# ----------------------------
-# Helper functions
-# ----------------------------
-
 # Extract video ID from YouTube URL or ID
 def extract_video_id(url_or_id):
     video_id_match = re.match(
@@ -54,11 +49,6 @@ def summarize_chunk(text, min_len=50, max_len=200):
         no_repeat_ngram_size=3
     )
     return tokenizer.decode(summary_ids[0], skip_special_tokens=True)
-
-
-# ----------------------------
-# Flask route
-# ----------------------------
 
 @app.route('/summarize', methods=['POST'])
 def summarize():
@@ -116,3 +106,4 @@ def summarize():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
