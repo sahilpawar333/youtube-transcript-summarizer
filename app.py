@@ -7,9 +7,8 @@ import logging
 import re
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for cross-origin requests
+CORS(app) 
 
-# Set up logging
 logging.basicConfig(level=logging.INFO)
 
 # Load BART model and tokenizer
@@ -96,7 +95,7 @@ def summarize():
 
         return jsonify({
             'summary': final_summary,
-            'chunks': chunk_summaries  # Optional: return per-chunk summaries too
+            'chunks': chunk_summaries 
         })
 
     except Exception as e:
@@ -106,4 +105,5 @@ def summarize():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
